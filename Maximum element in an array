@@ -1,0 +1,8 @@
+t = int(input())
+
+while t > 0:
+    t -= 1
+    N = int(input())
+    arr = list(map(int,input().split()))
+
+    print(max(arr))

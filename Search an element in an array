@@ -1,0 +1,8 @@
+N , X= map(int,input().split())
+A = list(map(int,input().split()))
+# found = True
+if X not in A:
+    # found = False
+    print("NO")
+else:
+    print("YES")

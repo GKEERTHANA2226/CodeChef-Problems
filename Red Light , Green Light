@@ -1,0 +1,11 @@
+# cook your dish here
+t = int(input())
+for i in range(t):
+    N, K = list(map(int,input().split()))
+    h = list(map(int,input().split()))
+    count = 0
+    for height in h:
+        if height > K:
+            count += 1
+    print(count)
+    

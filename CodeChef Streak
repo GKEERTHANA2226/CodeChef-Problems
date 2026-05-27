@@ -1,0 +1,30 @@
+t = int(input())
+
+while t > 0:
+    n = int(input())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    t -= 1
+    a_max = 0
+    a_count = 0
+    for x in a:
+        if x > 0:
+            a_count += 1
+            a_max = max(a_max,a_count)
+        else:
+            a_count = 0
+    b_max = 0
+    b_count = 0
+    for x in b:
+        if x > 0:
+            b_count += 1
+            b_max = max(b_max,b_count)
+        else:
+            b_count = 0
+    if a_max > b_max:
+        print("Om")
+    elif b_max > a_max:
+        print("Addy")
+    else:
+        print("Draw")
+    

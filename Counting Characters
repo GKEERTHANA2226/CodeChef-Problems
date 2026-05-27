@@ -1,0 +1,16 @@
+t = int(input())
+for _ in range( t):
+    n = int(input())
+    s = input()
+    count_a = 0
+    count_b = 0
+    for char in s:
+        if char == 'a':
+            count_a += 1
+         
+        elif char == 'b':
+            count_b += 1
+            
+    print(count_a,count_b)
+            
+            

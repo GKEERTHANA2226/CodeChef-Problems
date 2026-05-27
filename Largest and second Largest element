@@ -1,0 +1,7 @@
+t = int(input())
+for i in range(t):
+    n = int(input())
+    a = list(map(int,input().split()))
+    a1 = sorted(list(set(a)))
+    sum = a1[-1] + a1[-2]
+    print(sum)

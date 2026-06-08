@@ -1,0 +1,11 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    s = list(map(int, input().split()))
+    v = input()
+    res = float('inf')
+    for i in range(n):
+        if v[i] == '0':
+            res = min(res, s[i])
+    print(res)
+            

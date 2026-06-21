@@ -1,0 +1,8 @@
+t = int(input())
+
+while t > 0:
+    s = input()
+    last_two = int(s[-2:])
+    print(last_two % 20)
+    
+    t -= 1

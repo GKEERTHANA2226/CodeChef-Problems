@@ -1,0 +1,39 @@
+def chooseFile():
+    # Display the file selection menu
+    display = """Choose one File:
+1. Username
+2. User Password
+"""
+    return display
+
+
+# Function to read file content based on user selection
+def openFileByChoice(user_choice):
+    """
+    Reads and returns the selected file based on user input.
+
+    Args:
+        user_choice (int): The user's file selection choice.
+
+    Returns:
+        str: The file object or an error message if the choice is invalid.
+    """
+
+    # -------------------Complete the code here -----------------------------
+    if user_choice == 1:
+        return open("/home/chef/workspace/username.txt", 'r')
+    elif user_choice == 2:
+        return open("/home/chef/workspace/password.txt",'r')
+    else:
+        return "Invalid choice. Please select 1 or 2." 
+    
+
+if __name__ == '__main__':
+    print(chooseFile())
+
+    # Get user input and ensure it's an integer
+    user_choice = int(input("Select the file: "))
+
+    # Get and print file content
+    file = openFileByChoice(user_choice)
+    print(file)

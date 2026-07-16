@@ -1,0 +1,20 @@
+def get_poem_name():
+    """
+    Reads the first line from the poem file and returns it as a string.
+
+    :return: The first line of the poem file.
+    """
+    file_name = "/home/chef/workspace/poem.txt"
+    
+    with open(file_name, 'r') as file:
+        # Read the first line and return the value
+        content = file.readlines()
+        return content
+
+
+if __name__ == "__main__":
+    # Calling the function to get the first line of the poem
+    poem_name = get_poem_name()
+        
+    # Printing the poem name (first line of the file)
+    print(poem_name)

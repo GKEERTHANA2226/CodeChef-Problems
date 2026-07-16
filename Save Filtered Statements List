@@ -1,0 +1,25 @@
+def save_statements_list(statements):
+
+    # Define the file path where statements will be saved
+    filename = "/home/chef/workspace/statements_list.txt"
+
+    # Initialize an empty list to store filtered statements
+    filtered_statements = []
+
+    # -------Write code here----------
+    for statement in statements:
+        if len(statement) > 10:
+            filtered_statements.append(statement+"\n")
+
+    with open("statements_list.txt","w") as file:
+        file.writelines(filtered_statements)
+        # return file
+
+
+
+if __name__ == "__main__":
+    # Define a list of statements
+    statements = ["pomegranate", "Bananas", "Carrots"]
+    
+    # Call the function to save the statements list to a file
+    save_statements_list(statements)

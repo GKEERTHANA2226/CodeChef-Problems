@@ -1,0 +1,34 @@
+def openFile(mode):
+    """
+    Opens a file in the specified mode.
+    
+    Parameters:
+    mode (str): The mode in which to open the file. Accepts 'r', 'w', or 'a'.
+    
+    Returns:
+    str: A message indicating the file has been opened in the specified mode, 
+         or an error message for an invalid mode.
+    """
+
+    # ---------------Write code here-----------
+   
+    if mode == "r":
+        with open("file.txt", "r") as file:
+            return "File opened in read mode"
+    elif mode == "w":
+        with open("file.txt", "w") as file:
+            return "File opened in write mode"
+    elif mode == "a":
+        with open("file.txt", "a") as file:
+            return "File opened in append mode"
+    else:
+        return "Invalid mode"
+
+
+
+
+if __name__ == '__main__':
+    print(openFile('r'))
+    print(openFile('w'))
+    print(openFile('a'))
+    print(openFile('x'))  # This will return "Invalid mode"

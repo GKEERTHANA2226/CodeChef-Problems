@@ -1,0 +1,10 @@
+n = int(input().strip())
+friends = []
+for _ in  range(n):
+    friends.append(input().strip())
+i, j = map(int, input().split())
+i_index = i-1
+j_index = j-1
+friends[i_index], friends[j_index] =  friends[j_index], friends[i_index]
+for index in range(n):
+    print(f"Friend {index + 1}: {friends[index]}")

@@ -1,0 +1,6 @@
+user = input().strip("[]").split(",")
+tasks = [int(x.strip()) for x in user]
+names = ["MOrning Exercise", "Work Project", "Read a Book"]
+for i in range(len(tasks)):
+    status = "Completed" if tasks[i] == 1 else "Pending"
+    print(f"{i+1}. {names[i]}: {status}")

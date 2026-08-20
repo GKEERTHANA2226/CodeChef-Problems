@@ -1,0 +1,9 @@
+T = int(input())
+
+for _ in range(T):
+    A, B, P, Q = map(int, input().split())
+
+    if (P % A == 0 and Q % B == 0 and abs((P // A) - (Q // B)) <= 1):
+        print("YES")
+    else:
+        print("NO")

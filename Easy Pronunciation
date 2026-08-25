@@ -1,0 +1,18 @@
+t = int(input())
+for _ in range(t):
+    N = int(input())
+    S = input()
+    vowels = {'a','e','i','o','u'}
+    hard = False
+    count = 0
+    for char in S:
+        if char not in vowels:
+            count += 1
+            if count >= 4:
+                hard = True
+        else:
+            count = 0
+    if hard:
+        print("NO")
+    else:
+        print("YES")

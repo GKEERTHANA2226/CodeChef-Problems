@@ -1,0 +1,29 @@
+def myAtoi(s: str) -> int:
+    i = 0
+    n = len(s)
+    int_max = 2147483647
+    int_min = -2147483647
+    while i < n and s[i] == ' ':
+        i += 1 
+    if i == n:
+        return 0
+    sign = 1 
+    if s[i] == '+' or s[i] == '-':
+        if s[i] == '-':
+            sign = -1 
+        i += 1 
+    res = 0
+    has_digits = False
+    while i < n and s[i].isdigit():
+        has_digits = True
+        digit = int(s[i])
+        if sign == 1 and res > (int_max - digit) // 10:
+            return int_max
+        if sign == -1 and res > (int_max + 1 - digit) // 10:
+            return int_min
+        res = res * 10 + digit 
+        i += 1 
+    if not has_digits:
+        return 0 
+    return res * sign
+    

@@ -1,0 +1,9 @@
+# cook your dish here
+for _ in range(int(input())):
+    a, b, c, d, k = map(int,input().split())
+    minimum_moves = abs(c - a) + abs( d- b)
+    if k >= minimum_moves and (k - minimum_moves) % 2 == 0:
+        print("YES")
+    else:
+        print("NO")
+    

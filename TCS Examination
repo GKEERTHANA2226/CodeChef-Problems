@@ -1,0 +1,20 @@
+t = int(input())
+for _ in range(t):
+    D = list(map(int,input().split()))
+    S = list(map(int,input().split()))
+    if (sum(D) > sum(S)):
+        print("DRAGON")
+    elif sum(D) < sum(S):
+        print("SLOTH")
+    else:
+        if D[0] > S[0]:
+            print("DRAGON")
+        elif D[0] < S[0]:
+            print("SLOTH")
+        else:
+            if D[1] >  S[1]:
+                print("DRAGON")
+            elif D[1] < S[1]:
+                print("SLOTH")
+            else:
+                print("TIE")

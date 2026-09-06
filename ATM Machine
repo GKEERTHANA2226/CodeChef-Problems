@@ -1,0 +1,12 @@
+# cook your dish here
+for _ in range(int(input())):
+    n , k = map(int,input().split())
+    a = list(map(int,input().split()))
+    res = []
+    for i in range(n):
+        if a[i] <= k:
+            res.append('1')
+            k -= a[i]
+        else:
+            res.append('0')
+    print("".join(res))

@@ -1,0 +1,9 @@
+select s1.st_id, s1.st_name, s1.department, 
+s2.st_id, s2.st_name, s2.department from student s1
+
+inner join student s2 on s1.department = s2.department 
+and s1.st_id != s2.st_id; 
+
+select distinct s1.st_id, s1.st_name, s1.course_id from student s1
+inner join student s2 on s1.course_id = s2.course_id and s1.st_id != s2.st_id
+order by s1.course_id;
